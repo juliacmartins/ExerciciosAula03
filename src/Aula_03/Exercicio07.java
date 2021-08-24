@@ -18,13 +18,13 @@ public class Exercicio07 {
                     usuarioInformado = tc.next();
                     System.out.println("Digite a senha:");
                     senhaInformada = tc.next();
-                    cont++;
+                    cont--;
                     if ((usuarioInformado.equals(usuarioAutorizado))&&(senhaInformada.equals(senhaAutorizada))){
                         System.out.println("Login efetuado com sucesso! Numero de tentativas: "+cont);
                         logado=true;
                     }else {
                         System.out.println("Login não efetuado! Confira os dados. Numeros de tentativas:" +cont);
                     }
-                } while ((cont>3) || (logado));
+                } while ((cont<0) || (!logado));
     }
 }
